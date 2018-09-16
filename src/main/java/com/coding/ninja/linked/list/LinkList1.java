@@ -131,13 +131,7 @@ public class LinkList1 {
 	
 	public void addMid(int data, int pos) {
 		Node node = new Node(data);
-		// Node temp = head;
 		Node temp1 = head;
-		/*
-		 * int c = 0; while (temp != null) { temp = temp.next; c++;
-		 * 
-		 * }
-		 */
 		int c = size();
 		if (pos == c) {
 			System.out.println(" pos can not be last as we have to add in middle");

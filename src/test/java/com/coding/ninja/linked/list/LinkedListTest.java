@@ -35,10 +35,26 @@ public class LinkedListTest {
 	
 	@Test
 	public void test() {
-		LinkList ll = add1(5);
+		LinkList ll = add1();
 		ll.removeDuplicates(ll.head);
 	}
 
+	@Test
+	public void test1() {
+		LinkList ll = add2();
+		ll.print(ll.head);
+		System.out.println("\n After sorting");
+		ll.bubbleSort(ll.head);
+	}
+	
+	@Test
+	public void testMid() {
+		LinkList ll = add2();
+		ll.print(ll.head);
+		;
+		System.out.println("\n " + ll.printMiddel(ll.head));
+	}
+	
 	@Test
 	public void addMidTestOutofRange() {
 		LinkList1 ll = add(5);
@@ -58,11 +74,9 @@ public class LinkedListTest {
 
 		return ll;
 	}
-	private LinkList add1(int range) {
+	private LinkList add1() {
 		LinkList ll = new LinkList();
-		/*for (int i = 0; i < range; i++) {
-			ll.addLast(i);
-		}*/
+		
 		ll.addLast(281);
 		ll.addLast(386);
 		ll.addLast(386);
@@ -77,6 +91,18 @@ public class LinkedListTest {
 		ll.addLast(1428);
 		ll.addLast(1501);
 		ll.addLast(1950);
+		return ll;
+	}
+	private LinkList add2() {
+		LinkList ll = new LinkList();
+		
+		ll.addLast(5);
+		ll.addLast(1);
+		ll.addLast(6);
+		ll.addLast(2);
+		ll.addLast(3);
+		ll.addLast(7);
+		ll.addLast(1);
 		return ll;
 	}
 }
